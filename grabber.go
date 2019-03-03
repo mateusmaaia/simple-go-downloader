@@ -8,15 +8,13 @@ import (
 
 func main() {
 
-    fileUrl := "http://grupozap-code-challenge.s3-website-us-east-1.amazonaws.com/sources/source-3"
+    fileUrl := "https://support.oneskyapp.com/hc/en-us/article_attachments/202761627/example_1.json"
 
     if err := DownloadFile("registries.json", fileUrl); err != nil {
         panic(err)
     }
 }
 
-// DownloadFile will download a url to a local file. It's efficient because it will
-// write as it downloads and not load the whole file into memory.
 func DownloadFile(filepath string, url string) error {
 
     // Get the data
